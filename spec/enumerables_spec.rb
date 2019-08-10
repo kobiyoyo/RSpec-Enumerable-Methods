@@ -32,29 +32,30 @@ describe Enumerable do
     let(:multi) { proc { |x| x * 2 } }
 
     it 'returns looped elements of an array' do
-      expect(actual.map(&multi)).to eql([4, 10, 14, 6, 8])
+      expect(actual.my_map(&multi)).to eql([4, 10, 14, 6, 8])
     end
   end
     
   describe '#my_inject' do
     let(:actual) { [2, 5, 7, 3, 4] }
-    let(:add){ 0 }
-    let(:multiple){ 0 }
-    let(:division){ 0 }
-    let(:subtract){ 0 }
+    let(:accum){ 0 }
       
     it 'Sums elements in an array' do
-      multiple = actual.inject(3){|x,y|  x + y }
-      expect(multiple).to eql(24)
+      accum = actual.my_inject(365){|x,y|  x + y }
+      expect(accum).to eql(386)
     end
       
-    it 'Sums elements in an array' do
-      multiple = actual.inject(3){|x,y|  x + y }
-      expect(multiple).to eql(24)
+    it 'Multiply elements in an array' do
+      accum = actual.my_inject(934){|x,y|  x * y }
+      expect(accum).to eql(784560)
     end
-    it 'Sums elements in an array' do
-      multiple = actual.inject(3){|x,y|  x + y }
-      expect(multiple).to eql(24)
+      
+    it 'Divdes elements in an array' do
+      accum = actual.my_inject(10){|x,y|  x / y }
+      expect(accum).to eql(0)
     end
+  end
+  describe '#my_count'
+    
   end
 end # end of Enumerable Module

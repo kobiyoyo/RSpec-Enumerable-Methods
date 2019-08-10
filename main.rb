@@ -95,6 +95,6 @@ module Enumerable
  
 end
 multiples = 0;
-multiples = [2, 5, 7, 3, 4].inject(3){|x,y|  x + y }
+multiples = [2, 5, 7, 3, 4,345].my_inject{|x,y|  x / y }
 print multiples;
 
