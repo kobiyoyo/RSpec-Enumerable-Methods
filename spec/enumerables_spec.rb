@@ -2,6 +2,7 @@
 
 require './main'
 describe Enumerable do
+    
   describe '#my_each' do
     let(:actual) { [2, 5, 7] }
     let(:new_array) { [] }
@@ -55,7 +56,33 @@ describe Enumerable do
       expect(accum).to eql(0)
     end
   end
-  describe '#my_count'
     
+  describe '#my_count' do
+    let(:actual) { [2, 5, 7, 3, 4, 3] }
+      
+    it 'counts the length of the array' do
+      length = actual.my_count
+      expect(length).to eql(6)   
+    end
+      
+    it 'counts the length of the array' do
+      length = actual.my_count
+      expect(length).to eql(6)   
+    end
+      
+    it 'counts odd values in array' do
+      length = actual.my_count(&:odd?)
+      expect(length).to eql(4)   
+    end
+      
+    it 'counts values in array' do
+      length = actual.my_count(3)
+      expect(length).to eql(2)   
+    end
+      
+    it 'counts values without remainders' do
+      length = actual.my_count{|x| x % 2 == 0}
+      expect(length).to eql(2)   
+    end
   end
 end # end of Enumerable Module
