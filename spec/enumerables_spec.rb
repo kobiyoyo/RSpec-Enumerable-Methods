@@ -85,4 +85,5 @@ describe Enumerable do
       expect(length).to eql(2)   
     end
   end
+    
 end # end of Enumerable Module

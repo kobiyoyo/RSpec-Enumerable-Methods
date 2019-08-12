@@ -94,7 +94,5 @@ module Enumerable
     end
  
 end
-multiples = 0;
-multiples = [2, 5, 7, 3, 4,3].my_count{|x| x % 2 == 0}
-print multiples;
+
 
