@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 require './main'
 describe Enumerable do
@@ -86,4 +85,22 @@ describe Enumerable do
     end
   end
     
-end # end of Enumerable Module
+  describe '#my_all' do
+      let(:actual) { [2, 5, 35, 45, 4, 6, 89, 346, 44, 334, 3, 5, 435, 45, 4] }
+      
+      it 'check all values in array (false)' do
+        values = actual.my_all?{ |x| x > 100}
+        expect(values).to be false
+      end
+      
+      it 'check all values in array (true)' do
+        values = actual.my_all?{ |x| x != -1}
+        expect(values).to be true
+      end
+      
+      it 'check for empty array' do
+        values = [ ].my_all?
+        expect(values).to be true
+      end
+  end
+end 
