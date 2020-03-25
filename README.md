@@ -1,4 +1,6 @@
 # Enumerable Methods
+[![Maintainability](https://api.codeclimate.com/v1/badges/52f20ff6b0872acae68f/maintainability)](https://codeclimate.com/github/kobiyoyo/RSpec-Enumerable-Methods/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/52f20ff6b0872acae68f/test_coverage)](https://codeclimate.com/github/kobiyoyo/RSpec-Enumerable-Methods/test_coverage)
 Enumerable is a module in Ruby that provides many methods that can help with traversal, transforming, sorting, and filtering. Any class that can implement the #each method can use Enumerable methods, which will then yield each item in the collection to a block.The main aim of this project is to create your own enumerable methods,which has the same behaviour with the normal methods.TDD approach was adopted. and tests where written using Rspec framework
 ## Technologies
 
