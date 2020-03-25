@@ -40,6 +40,10 @@ $ git clone https://github.com/kobiyoyo/RSpec-Enumerable-Methods.git
 ```sh
 $ cd RSpec-Enumerable-Methods
 ```
+## Running the tests
+```sh
+$ run rspec
+```
 ## Authors
 
 👤 **Adama Chubiyojo Desmond**
